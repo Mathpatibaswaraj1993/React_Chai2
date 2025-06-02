@@ -3,11 +3,17 @@
 import { useState } from 'react';
 
 function Counter() {
-  const [count, setCount] = useState(0);
+  const [count, setCount] = useState(10);
 
   const handleAdd = () => {
     if (count < 20) {
       setCount(count + 1);
+      // setCount(prevCounter =>prevCounter +1);
+      // setCount(prevCounter =>prevCounter +1);
+      // setCount(prevCounter =>prevCounter +1);
+      // setCount(prevCounter =>prevCounter +1);
+      // setCount(prevCounter =>prevCounter +1);
+     
     }
   };
 

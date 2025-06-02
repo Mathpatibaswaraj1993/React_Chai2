@@ -1,36 +1,27 @@
 import React from 'react'
 
-function Card(props) {
-    console.log("props",props)
+function Card({username}) {
+    console.log(username)
   return (
-    <div className="flex flex-col rounded-xl  p-4"
-        style={{
-          border: '0.88px solid',
-  
-          backdropFilter: 'saturate(180%) blur(14px)',
-          background: ' #ffffff0d',
-        }}
-      >
-        <div>
-          <img
-            src="https://res.cloudinary.com/ddcg0rzlo/image/upload/v1652470298/9StaF0UBJfih_df0248.gif"
-            alt="nft-gif"
-            width="400"
-            height="400"
-            className="rounded-xl"
-          />
-        </div>
-        <div className="flex flex-col  rounded-b-xl py-4 ">
-          <div className="flex justify-between">
-            <h1 className="font-RubikBold ">Bored ape nft accidental</h1>
-            <h1 className="font-bold font-RubikBold">Price</h1>
-          </div>
-          <div className="flex  justify-between font-mono">
-            <p>#345</p>
-            <p>0.01</p>
-          </div>
-        </div>
+    <div className="card"  style={{ width: '18rem', backgroundColor:'pink' }}>
+    <img
+      src="data:image/jpeg;base64,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"
+      className="card-img-top"
+      alt="Card"
+    />
+    <div className="card-body">
+      <h5 className="card-title">Card Title</h5>
+      <p className="card-text">
+        This is a simple card built with Bootstrap in React. You can use it to display content elegantly.
+      </p>
+      <a href="#" className="btn btn-primary">
+        Go somewhere
+        </a>
+       
       </div>
+      <button className='btn btn-dark'  btnText="Click me"></button>
+    </div>
+    
   )
 }
 
